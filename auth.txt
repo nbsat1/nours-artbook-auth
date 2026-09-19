@@ -1,0 +1,20 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Authentication</title>
+</head>
+<body>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const provider = params.get("provider");
+
+    if (provider === "github") {
+      window.location.href =
+        "https://api.netlify.com/auth?provider=github&scope=repo";
+    }
+  </script>
+</body>
+</html>
+```
